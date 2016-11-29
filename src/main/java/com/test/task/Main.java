@@ -12,42 +12,42 @@ import java.util.ResourceBundle;
 public class Main {
 
     private static final Logger LOGGER = Logger.getLogger(Main.class);
+    private static final ResourceBundle RES = ResourceBundle.getBundle("lang", Locale.getDefault());
 
     public static void main(String[] args) {
 
-        Locale.getDefault();
-        ResourceBundle res = ResourceBundle.getBundle("lang");
-
-        Clock event = new Clock();
+        Clock clock = new Clock();
 
         String time = null;
         try {
-            time = event.getTime();
+            time = clock.getTime();
         }catch (ParseException e){
             LOGGER.error("Exception while parsing time", e);
         }
 
+        printTime(time);
+    }
 
+    private static void printTime(String time){
         if (time != null){
             switch (time) {
                 case "MORNING":
-                    System.out.println(res.getString("morning"));
+                    System.out.println(RES.getString("morning"));
                     LOGGER.info("Now is morning");
                     break;
                 case "DAY":
-                    System.out.println(res.getString("day"));
+                    System.out.println(RES.getString("day"));
                     LOGGER.info("Now is day");
                     break;
                 case "EVENING":
-                    System.out.println(res.getString("evening"));
+                    System.out.println(RES.getString("evening"));
                     LOGGER.info("Now is evening");
                     break;
                 case "NIGHT":
-                    System.out.println(res.getString("night"));
+                    System.out.println(RES.getString("night"));
                     LOGGER.info("Now is night");
                     break;
             }
         }else LOGGER.warn("Time is null");
-
     }
 }
