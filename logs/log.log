@@ -47,3 +47,7 @@
 2016-11-26 11:07:09,088  INFO [main] - com.test.task.Clock.getTime 46 - Time is day
 2016-11-26 11:07:09,094  INFO [main] - com.test.task.Clock.getTime 42 - Time is morning
 2016-11-26 11:07:09,095  INFO [main] - com.test.task.Clock.getTime 50 - Time is evening
+2016-11-29 16:17:12,455  INFO [main] - com.test.task.Clock.getTime 46 - Time is day
+2016-11-29 16:17:12,460  INFO [main] - com.test.task.Main.printTime 40 - Now is day
+2016-11-29 16:17:32,714  INFO [main] - com.test.task.Clock.getTime 46 - Time is day
+2016-11-29 16:17:32,718  INFO [main] - com.test.task.Main.printTime 40 - Now is day
