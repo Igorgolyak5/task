@@ -37,7 +37,10 @@ public class Clock {
         evening = dateFormat.parse(ClockEnum.EVENING.toString());
         night = dateFormat.parse(ClockEnum.NIGHT.toString());
 
+        return validateTime();
+    }
 
+    private String validateTime(){
         if(current.after(morning) && current.before(day)){
             LOGGER.info("Time is morning");
             return "MORNING";
@@ -53,6 +56,5 @@ public class Clock {
         else
             LOGGER.info("Time is night");
         return "NIGHT";
-
     }
 }
